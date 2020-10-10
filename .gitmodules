@@ -1,0 +1,8 @@
+[submodule "database"]
+	path = database
+	url = https://github.com/Metodos-Agiles-UTN-2020/database.git
+	branch = main
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Metodos-Agiles-UTN-2020/frontend.git
+	branch = main
