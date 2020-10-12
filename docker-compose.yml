@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+    frontend:
+        container_name: 'frontend'
+        image: metodosagilesutn2020/frontend
+        restart: always
+        ports: 
+            - "4200:80"
+        env_file:
+            - ./config/frontend.env
+        depends_on:
+            - backend
+    
+    backend:
+        container_name: 'backend'
+        image: metodosagilesutn2020/backend
+        restart: always
+        ports: 
+            - "8080:8080"
+        env_file:
+            - ./config/backend.env
+        depends_on: 
+            - postgres
+
+    postgres:
+        container_name: 'postgres'
+        image: metodosagilesutn2020/database
+        restart: always
+        volumes:
+            - ./db-data:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+        env_file:
+            - ./config/database.env
