@@ -6,3 +6,6 @@
 	path = frontend
 	url = https://github.com/Metodos-Agiles-UTN-2020/frontend.git
 	branch = main
+[submodule "backend"]
+	path = backend
+	url = git@github.com:Metodos-Agiles-UTN-2020/backend.git
